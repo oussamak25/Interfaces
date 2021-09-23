@@ -1,6 +1,8 @@
 package application;
 	
 
+
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -8,18 +10,25 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.geometry.Orientation;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
+		
+		
 		FlowPane raiz = new FlowPane();
 		
+
 		raiz.setHgap(20);
 		raiz.setVgap(20);
+		
+		raiz.setPadding(new Insets(20));
 		
 		
 		Button btnAceptar = new Button("Aceptar");
@@ -29,9 +38,12 @@ public class Main extends Application {
 		Label lbTexto = new Label("hola esto es una ventana de javafx");
 		
 		
-		raiz.setMargin(btnDelante, new Insets(10, 0, 10, 10));
+		
+
 		
 		
+		
+
 		raiz.getChildren().add(btnAceptar);
 		raiz.getChildren().add(btnCancelar);
 		raiz.getChildren().add(btnAtras);
