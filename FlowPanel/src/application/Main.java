@@ -21,14 +21,16 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		
-		FlowPane raiz = new FlowPane();
+	
 		
 
-		raiz.setHgap(20);
-		raiz.setVgap(20);
+		FlowPane flowpanel = new FlowPane();
 		
-		raiz.setPadding(new Insets(20));
+
+		flowpanel.setHgap(20);
+		flowpanel.setVgap(20);
+		
+		flowpanel.setPadding(new Insets(20));
 		
 		
 		Button btnAceptar = new Button("Aceptar");
@@ -39,18 +41,29 @@ public class Main extends Application {
 		
 		
 		
+		btnAceptar.setMaxHeight(Double.MAX_VALUE);
+		btnAtras.setMaxHeight(Double.MAX_VALUE);
+		btnCancelar.setMaxHeight(Double.MAX_VALUE);
+		btnDelante.setMaxHeight(Double.MAX_VALUE);
+		
+
 
 		
 		
 		
+		
 
-		raiz.getChildren().add(btnAceptar);
-		raiz.getChildren().add(btnCancelar);
-		raiz.getChildren().add(btnAtras);
-		raiz.getChildren().add(btnDelante);
-		raiz.getChildren().add(lbTexto);
+		flowpanel.getChildren().add(btnAceptar);
+		flowpanel.getChildren().add(btnCancelar);
+		flowpanel.getChildren().add(btnAtras);
+		flowpanel.getChildren().add(btnDelante);
+		flowpanel.getChildren().add(lbTexto);
 		
 	
+		
+		StackPane raiz = new StackPane();
+		raiz.setPadding(new Insets(5));
+		raiz.getChildren().addAll(new Rectangle(Integer.MAX_VALUE,Integer.MAX_VALUE, Color.DARKGREY), flowpanel);
 		
 		Scene escena = new Scene(raiz, 350, 100);
 		
