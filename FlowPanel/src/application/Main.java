@@ -29,7 +29,7 @@ public class Main extends Application {
 		Label lbTexto = new Label("hola esto es una ventana de javafx");
 		
 		
-		raiz.setMargin(btnDelante, new Insets(10, 0, 10, 0));
+		raiz.setMargin(btnDelante, new Insets(10, 0, 10, 10));
 		
 		
 		raiz.getChildren().add(btnAceptar);
