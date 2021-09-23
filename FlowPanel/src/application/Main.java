@@ -15,13 +15,17 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-	
+		StackPane raiz = new StackPane();
+		raiz.setPadding(new Insets(5));
+		Label lbTexto = new Label("hola esto es una ventana de javafx");
+		raiz.setAlignment(Pos.TOP_CENTER);
 		
 
 		FlowPane flowpanel = new FlowPane();
@@ -31,13 +35,13 @@ public class Main extends Application {
 		flowpanel.setVgap(20);
 		
 		flowpanel.setPadding(new Insets(20));
-		
+		flowpanel.setAlignment(Pos.BOTTOM_CENTER);
 		
 		Button btnAceptar = new Button("Aceptar");
 		Button btnCancelar = new Button("Cancelar");
 		Button btnAtras = new Button("Atras");
 		Button btnDelante = new Button("Delante");
-		Label lbTexto = new Label("hola esto es una ventana de javafx");
+		
 		
 		
 		
@@ -48,22 +52,16 @@ public class Main extends Application {
 		
 
 
-		
-		
-		
-		
+
 
 		flowpanel.getChildren().add(btnAceptar);
 		flowpanel.getChildren().add(btnCancelar);
 		flowpanel.getChildren().add(btnAtras);
 		flowpanel.getChildren().add(btnDelante);
-		flowpanel.getChildren().add(lbTexto);
 		
-	
 		
-		StackPane raiz = new StackPane();
-		raiz.setPadding(new Insets(5));
-		raiz.getChildren().addAll(new Rectangle(Integer.MAX_VALUE,Integer.MAX_VALUE, Color.DARKGREY), flowpanel);
+		
+		raiz.getChildren().addAll(new Rectangle(Integer.MAX_VALUE,Integer.MAX_VALUE, Color.DARKGREY), lbTexto, flowpanel);
 		
 		Scene escena = new Scene(raiz, 350, 100);
 		
