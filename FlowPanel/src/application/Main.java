@@ -44,12 +44,12 @@ public class Main extends Application {
 		Button btnAtras = new Button("Atras");
 		Button btnDelante = new Button("Delante");
 		
-		btnAceptar.setStyle("-fx-background-color: #8280F5;");
-        btnAtras.setStyle("-fx-background-color: #8280F5;");
-        btnCancelar.setStyle("-fx-background-color: #8280F5;");
-        btnDelante.setStyle("-fx-background-color: #8280F5;");
-        lbTexto.setStyle("-fx-background-color: #FFFFFF;");
-        lbTexto.setPadding(new Insets(20));
+			btnAceptar.setStyle("-fx-background-color: #8280F5;");
+	        btnAtras.setStyle("-fx-background-color: #8280F5;");
+	        btnCancelar.setStyle("-fx-background-color: #8280F5;");
+	        btnDelante.setStyle("-fx-background-color: #8280F5;");
+	        lbTexto.setStyle("-fx-background-color: #FFFFFF;");
+	        lbTexto.setPadding(new Insets(20));
 
 
 		flowpanel.getChildren().add(btnAceptar);
