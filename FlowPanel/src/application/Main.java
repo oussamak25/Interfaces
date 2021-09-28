@@ -10,15 +10,10 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 
@@ -48,6 +43,14 @@ public class Main extends Application {
 		Button btnCancelar = new Button("Cancelar");
 		Button btnAtras = new Button("Atras");
 		Button btnDelante = new Button("Delante");
+		
+		btnAceptar.setStyle("-fx-background-color: #8280F5;");
+        btnAtras.setStyle("-fx-background-color: #8280F5;");
+        btnCancelar.setStyle("-fx-background-color: #8280F5;");
+        btnDelante.setStyle("-fx-background-color: #8280F5;");
+        lbTexto.setStyle("-fx-background-color: #FFFFFF;");
+        lbTexto.setPadding(new Insets(20));
+
 
 		flowpanel.getChildren().add(btnAceptar);
 		flowpanel.getChildren().add(btnCancelar);
@@ -58,12 +61,13 @@ public class Main extends Application {
 		
 		raiz.getChildren().addAll(new Rectangle(Integer.MAX_VALUE,Integer.MAX_VALUE, Color.DARKGREY), lbTexto, flowpanel);
 		
-		Scene escena = new Scene(raiz, 350, 100);
+		Scene escena = new Scene(raiz, 500, 250);
 		
 		primaryStage.setScene(escena);
 		
 		primaryStage.setTitle("FlowPanel");
 		primaryStage.show();
+	
 	
 	}
 	
